@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import supabase from "../supabaseClient"; // pastikan path ini sesuai dengan file-mu
+import supabase from "../supabaseClient";
 
 export default function EventPage() {
   const [name, setName] = useState("");
@@ -55,25 +55,44 @@ export default function EventPage() {
         <h1 className="text-4xl md:text-5xl font-['Fredoka_One'] text-amber-600 mb-4">
           🎂 Pesta Ulang Tahun Chayra 🎀
         </h1>
+
         <p className="text-gray-700 mb-4 leading-relaxed text-lg">
           Yuk ikut rayakan ulang tahun ke-5 Chayra yang penuh warna dan tawa!
           Kami tunggu kehadiranmu di hari yang spesial ini 💕
         </p>
 
+        {/* Lokasi */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
           <p className="text-gray-700 font-semibold">
-            📍 Tempat: Rumah Chayra, Jl. Mawar Indah No. 5 📅 Tanggal: Minggu,
-            15 Desember 2025 🕒 Waktu: 10.00 WIB - 13.00 WIB
+            📍 Tempat: <span className="text-amber-700">Rumah Chayra</span>
+            <br />
+            📅 Tanggal: Sabtu, 15 November 2025
+            <br />
+            🕒 Waktu: 10.00 WIB - Selesai
           </p>
         </div>
 
+        {/* Map embed */}
+        <div className="rounded-2xl overflow-hidden mb-6 shadow-md">
+          <iframe
+            title="Lokasi Rumah Chayra"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3967.230567293583!2d106.7697428!3d-6.857736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e683ad4bfc2e179%3A0xb0cf3c41c35ccf2b!2s4W69%2BFF4%20Cipetir%2C%20Kabupaten%20Sukabumi%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1731337000000!5m2!1sid!2sid"
+            width="100%"
+            height="250"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        {/* RSVP */}
         {confirmed === null ? (
           <>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Tulis namamu di sini..."
+              placeholder="Tulis namamu di sini... untuk konfirmasi kehadiran"
               className="w-full px-4 py-2 mb-4 border border-amber-200 rounded-full focus:ring-2 focus:ring-pink-300 outline-none text-center"
             />
             {message && (
