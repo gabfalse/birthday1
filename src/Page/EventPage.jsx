@@ -72,6 +72,8 @@ export default function EventPage() {
           <p className="text-gray-700 font-semibold">
             📍 Tempat: Rumah Chayra
             <br />
+            👗 Dresscode: Coklat Mahogany
+            <br />
             📅 Sabtu 15 Nov 2025 — 10.00 WIB
             <br />
             📅 Minggu 16 Nov 2025 — 09.00 WIB

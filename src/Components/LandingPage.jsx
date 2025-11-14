@@ -15,7 +15,7 @@ export default function LandingPage({ onNext }) {
       <div className="mt-10 flex justify-center">
         <img
           src="https://gazunkewppvxfpitkarj.supabase.co/storage/v1/object/public/affiliate_product/
-chayra-landings.png"
+chayra-landing.png"
           alt="Birthday Celebration"
           className="w-40 h-40 md:w-56 md:h-56 object-cover rounded-full drop-shadow-lg border-4 border-pink-200 animate-bounce"
         />
